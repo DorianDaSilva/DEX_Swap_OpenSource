@@ -22,7 +22,8 @@ You can realize the trade succesfully and safely but users won't see the missing
 This build uses the previous version of `Wallet Connect` and requires upgrading the wallet config in `app.tsx` and readjust the parameters and imports accordingly throughout the code or use the web3 wallet provider of your choice
 
 
-###Launch
+### Launch
+
 Run `yarn install` to download dependencies!
 
 Enjoy!
