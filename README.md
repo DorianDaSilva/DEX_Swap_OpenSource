@@ -1,71 +1,28 @@
-# 0x Next.js Demo App
-
 ## Overview
 
-An example ERC-20 swap application built on [Next.js 13](https://nextjs.org/) with [0x Swap API](https://0x.org/docs/0x-swap-api/introduction) and [ConnectKit](https://docs.family.co/connectkit#connectkit).
+Front end/Back end codebase for DEX Swap
 
-Covers best practices for how to use the 0x Swap API's [/price](https://0x.org/docs/0x-swap-api/api-references/get-swap-v1-price) endpoint for [indicative pricing](https://0x.org/docs/0x-swap-api/guides/accessing-rfq-liquidity/how-to-integrate-rfq-liquidity#1-indicative-pricing) and the [/quote](https://0x.org/docs/0x-swap-api/api-references/get-swap-v1-quote) endpoint for [firm quotes](https://0x.org/docs/0x-swap-api/guides/accessing-rfq-liquidity/how-to-integrate-rfq-liquidity#2-firm-quotes).
+- Includes:
 
-### Live Demo
+* Functional Swap function
+* JS logic
+* Price view and quote view UI
+* CSS
 
-Checkout with live demo 👉 [here](https://0x-nextjs-demo-app-git-main-0x-eng.vercel.app/)
+Ready to deploy!
 
-![](https://raw.githubusercontent.com/0xProject/0x-nextjs-demo-app/main/public/demo.gif)
+### Bug Fix
 
-## Getting Started
+This code wasn't deployed live for public use due to an unresolved error when fetching and importing the logoURI and Token symbol from the price view into the quote view to finalize the trade.
 
-1. Setup the required API keys
+You can realize the trade succesfully and safely but users won't see the missing data when finalizing the trade, therefore, it is recommended to fix the issue prior to deploying it for production.
 
-| **API Keys**           | **Description**                                                                                                        | **Code**                                                                                                                                                                                                        |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| alchemyId              | Alchemy API key (create one [here](https://docs.alchemy.com/docs/alchemy-quickstart-guide#1key-create-an-alchemy-key)) | Add [here](https://github.com/0xProject/0x-nextjs-demo-app/blob/main/pages/_app.tsx#L14)                                                                                                                        |
-| walletConnectProjectId | WalletConnect's SDK to help with connecting wallets (create one [here](https://cloud.walletconnect.com/sign-in))       | Add [here](https://github.com/0xProject/0x-nextjs-demo-app/blob/main/pages/_app.tsx#L15)                                                                                                                        |
-| 0x                     | 0x API key (create one [here](https://0x.org/docs/introduction/getting-started))                                       | Add for /price [here](https://github.com/0xProject/0x-nextjs-demo-app/blob/main/pages/api/price.ts#L18) and for /quote [here](https://github.com/0xProject/0x-nextjs-demo-app/blob/main/pages/api/quote.ts#L18) |
+###Wallet
 
-2. Install project dependencies
-
-```
-npm install
-```
-
-3. Start the Next.js development server
-
-```
-npm run dev
-```
-
-4. Navigate to [http://localhost:3000](http://localhost:3000)
-
-```
-open http://localhost:3000
-```
-
-## Resources
-
-### Video
-
-🎥 Watch [this video](https://www.youtube.com/watch?v=P1ECx9zKQiU) for an walk-through of this app.
-
-### Documentation
-
-#### Swap API Basics
-
-- [**📚 Swap API Docs**](https://0x.org/docs/0x-swap-api/introduction)
-- [**How to Use Swap API**](https://0x.org/docs/0x-swap-api/guides/swap-tokens-with-0x-swap-api)
-- [**Quote API Endpoint**](https://0x.org/docs/0x-swap-api/api-references/get-swap-v1-quote)
-- [**Price API Endpoint**](https://0x.org/docs/0x-swap-api/api-references/get-swap-v1-price)
-- [**⛓️ Swap API Endpoints on All Networks**](https://0x.org/docs/introduction/0x-cheat-sheet)
-
-#### RFQ Integration on Swap API
-
-The 0x Swap API makes it simple to easily integrate RFQ liquidity for the best pricing. This demo app is setup to enble RFQ liquidity by default becuase it requires a non-null takerAddress. For more implement details and the difference between indicative pricing and requesting a firm quote, check out [**How to Integrate RFQ Liquidity**](https://0x.org/docs/0x-swap-api/guides/accessing-rfq-liquidity/how-to-integrate-rfq-liquidity). 
-
-#### Monetizing Your Swap Integration
-
-You have full flexibility to collect affiliate fees on trades going through your swap integration. This can be done by setting the `feeRecipient` and `buyTokenPercentageFee` parameters in a Swap API request. 
-
-If you would like to display the fee to your end users separately, just display the amount returned by `grossBuyAmount` * `buyTokenPercentageFee`.
-
-Learn more about setting up monetization [here](https://0x.org/docs/developer-resources/faqs-and-troubleshooting#monetizing-your-swap-integration). 
+This build uses the previous version of `Wallet Connect` and requires upgrading the wallet config in `app.tsx` and readjust the parameters and imports accordingly throughout the code
 
 
+###Launch
+Run `yarn install` to download dependencies!
+
+Enjoy!
