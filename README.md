@@ -2,7 +2,7 @@
 
 Front end/Back end codebase for DEX Swap
 
-- Includes:
+Includes:
 
 * Functional Swap function
 * JS logic
