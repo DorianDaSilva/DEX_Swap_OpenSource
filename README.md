@@ -17,9 +17,11 @@ This code wasn't deployed live for public use due to an unresolved error when fe
 
 You can realize the trade succesfully and safely but users won't see the missing data when finalizing the trade, therefore, it is recommended to fix the issue prior to deploying it for production.
 
-### Wallet
+### Other considerations
 
-This build uses the previous version of `Wallet Connect` and requires upgrading the wallet config in `app.tsx` and readjust the parameters and imports accordingly throughout the code or use the web3 wallet provider of your choice
+* This build uses the previous version of `Wallet Connect` and requires upgrading the wallet config in `app.tsx` and readjust the parameters and imports accordingly throughout the code or use the web3 wallet provider of your choice
+* You will need to create a `projectID` with Wallet Connect to use them as provider
+* You will need to get your own api key to use the swap API
 
 
 ### Launch
