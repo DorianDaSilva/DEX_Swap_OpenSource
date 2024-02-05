@@ -1,0 +1,459 @@
+.HeroSection {
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: transparent;
+}
+
+.HeroSection_box {
+  background-color: rgb(3, 1, 22, 0.6);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 30rem;
+}
+
+@media (max-width: 968px) and (min-width: 868px) {
+  .HeroSection_box {
+    transform: translateX(15%);
+  }
+}
+
+@media (max-width: 867px) and (min-width: 600px) {
+  .HeroSection_box {
+    transform: translateX(10%);
+  }
+}
+
+@media (max-width: 599px) {
+  .HeroSection_box {
+    transform: translateX(8%);
+    width: 100%;
+  }
+}
+
+.HeroSection_box_heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+}
+.HeroSection_box_input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #030116;
+  border: 1px solid #380d72;
+  border-radius: 0.5rem;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+
+.HeroSection_box_input input {
+  border: 0;
+  outline: 0;
+  height: 3.5rem;
+  width: 15.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: rgb(56, 13, 114, 0.5);
+  border: 1px solid #030116;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .HeroSection_box_input input {
+    width: 60%;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 468px) {
+  .HeroSection_box {
+    width: 75vw !important;
+  }
+
+  .HeroSection_box_input {
+    height: 7vh !important;
+  }
+
+  .HeroSection_box_input input {
+    width: 65% !important;
+  }
+}
+
+.HeroSection_box_input_button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem;
+  height: 3.5rem;
+  width: 100%;
+  margin-left: 0.25rem;
+  background-color: #030116;
+  padding: 0.25rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-right: transparent;
+  border: 1px solid #380d72;
+  border-right-color: transparent;
+}
+
+@media (max-width: 600px) and (min-width: 401px) {
+  .HeroSection_box_input_button {
+    width: 5rem;
+    height: 3rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .HeroSection_box_input_button {
+    width: 3.25rem;
+    height: 3rem;
+  }
+}
+
+.HeroSection_box_input_select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  background-color: rgb(22, 3, 47, 0.8);
+  border: 1px solid #030116;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+  color: white;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@media (max-width: 600px) {
+  .HeroSection_box_input_select {
+    width: 0;
+    padding: 0;
+    color: transparent;
+  }
+}
+
+.HeroSection_box_input_image_container {
+  display: flex;
+  width: 30%;
+  height: auto;
+  background-color: #030116;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@media (max-width: 600px) and (min-width: 401px) {
+  .HeroSection_box_input_image_container {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .HeroSection_box_input_image_container {
+    width: 100%;
+    height: 100%;
+  }
+}
+.HeroSection_box_input_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.HeroSection_box_input_select_token {
+  display: flex;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: scroll;
+  background-color: rgb(22, 3, 47, 0.5);
+  border: 1px solid #030116;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+  z-index: 10;
+}
+
+.HeroSection_box_input_select_token::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(22, 3, 47, 0.5);
+  border: 1px solid #030116;
+}
+
+.HeroSection_box_input_select_token::-webkit-scrollbar-thumb {
+  background-color: #030116;
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.HeroSection_box_btn {
+  @apply bg-blue-500 text-white;
+  width: 100%;
+  display: flex-col;
+  justify-content: center;
+  outline: 0;
+  margin-top: 0.75rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+ 
+}
+
+.HeroSection_box_btn::hover {
+  pointer: cursor;
+}
+
+.switchButton {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 45.5%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #5f6783;
+  background-color: rgb(3, 1, 22);
+  border: 1px solid #380d72;
+  font-size: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.switchButton:hover {
+  background-color: rgb(59, 130, 246);
+  color: white;
+  cursor: pointer;
+}
+
+.ArrowDownOutlined {
+  color: white;
+  //transition: color 0.3s ease-in-out;
+}
+
+.ArrowDownOutlined:hover {
+  color: rgb(3, 1, 22, 0.7);
+}
+
+.transactionFee_box {
+  display: flex-row;
+  width: 100%;
+  margin-left: 0.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: -0.25rem;
+}
+
+.transactionFee {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.modal_content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* padding-top: 20px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.Modal_input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #030116;
+  border: 1px solid #380d72;
+  width: 90%;
+  border-radius: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.Modal_input input {
+  border: 0;
+  outline: 0;
+  height: 3.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: rgb(56, 13, 114, 0.5);
+  border: 1px solid #030116;
+  border-radius: 0.5rem;
+  color: dim-white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.tokenChoice {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.tokenChoice:hover {
+  cursor: pointer;
+  position: relative;
+  background-color: rgb(60, 21, 104, 0.7);
+  color: rgb(59, 130, 246);
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 95%;
+  border-radius: 0.5rem;
+}
+
+.tokenChoiceWrapper {
+  overflow-y: auto;
+  max-height: 325px;
+  //margin-bottom: -25px;
+}
+
+.tokenChoiceWrapper::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(60, 21, 104, 0.4);
+  border: 1px solid #030116;
+  border-radius: 0.5rem;
+}
+
+.tokenChoiceWrapper::-webkit-scrollbar-thumb {
+  background-color: rgb(60, 21, 104, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+}
+
+.tokenName {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tokenTicker {
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 300;
+  color: white;
+}
+
+.tokenLogo {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(59, 130, 246, 0.3);
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 35em) {
+  .HeroSection {
+    width: 95%;
+  }
+  .HeroSection_box {
+    width: 95%;
+  }
+
+  .HeroSection_box_input input {
+    width: 50%;
+  }
+}
+
+
+
+.HeroSection_box_Quote {
+  background-color: rgb(3, 1, 22, 0.6);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  width: 30rem;
+}
+
+
+.HeroSection_box_Quote_heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+
+.HeroSection_box_input_Quote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #030116;
+  border: 2px solid #380d72;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.HeroSection_box_input_Quote_input {
+  border: 0;
+  outline: 0;
+  height: 3.5rem;
+  width: 15rem;
+ padding: 0.5rem;
+  margin-right: 1rem;
+  background-color: rgb(56, 13, 114, 0.5);
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+ 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.HeroSection_box_input_Quote_select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 5rem;
+  height: 3.5rem;
+  background-color: rgb(22, 3, 47, 0.8);
+  border: 1px solid red;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+  color: white;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
